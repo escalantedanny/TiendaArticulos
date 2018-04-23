@@ -22,7 +22,7 @@ class AddArticlesTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->integer('category_id')->unsigned();
 
-            //asignamos la palabra ferign para apuntar a la otra tabla
+            //asignamos la palabra foreign para apuntar a la otra tabla
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps();
